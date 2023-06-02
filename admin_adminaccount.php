@@ -298,7 +298,11 @@ if(isset($_POST['btnAdd'])){
 				if (firstname == "") {
 					$("#error").text("First Name cannot be empty").show();
 				} else if (!regex.test(firstname)){
-					$("#error").text("First Name must be aphabetical").show();
+					$("#error").text("First Name must be alphabetical").show();
+				} else if (lastname == "") {
+					$("#error").text("Last Name cannot be empty").show();
+				} else if (!regex.test(lastname)){
+					$("#error").text("Last Name must be alphabetical").show();
 				}
 
             });
