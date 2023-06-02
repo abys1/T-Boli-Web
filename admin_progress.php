@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
 	<title></title>
-	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 		.progress-bar {
@@ -26,7 +27,7 @@
 		<a href="admin.php" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
 		<a href="admin_student.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Students</a>
 		<a href="admin_teachers.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Teachers</a>
-		<a href="#" class="icon-a"><i class="fa fa-upload icons"></i> &nbsp;&nbsp;Upload Lesson/Content</a>
+		<a href="admin_upload.php" class="icon-a"><i class="fa fa-upload icons"></i> &nbsp;&nbsp;Upload Lesson/Content</a>
 		<a href="admin_progress.php" class="icon-a"><i class="fa fa-hourglass icons"></i> &nbsp;&nbsp;Progress</a>
 		<a href="#" class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Category</a>
 		<a href="#" class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Class/Batch</a>
@@ -49,9 +50,9 @@
 		</div>
 
 		<!-- Table -->
-		<div class="table-container">
-			<input type="text" id="search-input" placeholder="Search">
-			<table id="my-table">
+		<div class="table-container" style="text-align: center;">
+	<input type="text" id="search-input" placeholder="Search">
+	<table id="my-table"><br><br>
 				<thead>
 					<tr>
 						<th>ID</th>
@@ -66,9 +67,21 @@
 					<tr>
 						<td>1</td>
 						<td>Elmer Luspo</td>
-						<td><div class="progress-bar"><div class="progress" style="width: 50%"></div></div></td>
-						<td><div class="progress-bar"><div class="progress" style="width: 80%"></div></div></td>
-						<td><div class="progress-bar"><div class="progress" style="width: 70%"></div></div></td>
+						<td>
+							<div class="progress-bar">
+								<div class="progress" style="width: 50%"><strong>50%</div>
+							</div>
+						</td>
+						<td>
+							<div class="progress-bar">
+								<div class="progress" style="width: 80%"><strong>80%</div>
+							</div>
+						</td>
+						<td>
+							<div class="progress-bar">
+								<div class="progress" style="width: 70%"><strong>70%</div>
+							</div>
+						</td>
 						<td>
 							<button class="action view">View</button>
 						</td>
@@ -76,12 +89,26 @@
 					<tr>
 						<td>2</td>
 						<td>JD Luspo</td>
-						<td><div class="progress-bar"><div class="progress" style="width: 10%"></div></div></td>
-						<td><div class="progress-bar"><div class="progress" style="width: 30%"></div></div></td>
-						<td><div class="progress-bar"><div class="progress" style="width: 40%"></div></div></td>
+						<td>
+							<div class="progress-bar">
+								<div class="progress" style="width: 10%"><strong>10%</strong></div>
+							</div>
+						</td>
+						<td>
+							<div class="progress-bar">
+								<div class="progress" style="width: 30%"><strong>30%</strong></div>
+							</div>
+						</td>
+						<td>
+							<div class="progress-bar">
+								<div class="progress" style="width: 40%"><strong>40%</strong></div>
+							</div>
+						</td>
 						<td>
 							<button class="action view">View</button>
 						</td>
+					</tr>
+
 					</tr>
 				</tbody>
 			</table>
@@ -90,42 +117,43 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
-		$(".nav").click(function(){
-			$("#mySidenav").css('width','70px');
-			$("#main").css('margin-left','70px');
+		$(".nav").click(function () {
+			$("#mySidenav").css('width', '70px');
+			$("#main").css('margin-left', '70px');
 			$(".logo").css('visibility', 'hidden');
 			$(".logo span").css('visibility', 'visible');
 			$(".logo span").css('margin-left', '-10px');
 			$(".icon-a").css('visibility', 'hidden');
 			$(".icons").css('visibility', 'visible');
 			$(".icons").css('margin-left', '-8px');
-			$(".nav").css('display','none');
-			$(".nav2").css('display','block');
+			$(".nav").css('display', 'none');
+			$(".nav2").css('display', 'block');
 		});
 
-		$(".nav2").click(function(){
-			$("#mySidenav").css('width','300px');
-			$("#main").css('margin-left','300px');
+		$(".nav2").click(function () {
+			$("#mySidenav").css('width', '300px');
+			$("#main").css('margin-left', '300px');
 			$(".logo").css('visibility', 'visible');
 			$(".icon-a").css('visibility', 'visible');
 			$(".icons").css('visibility', 'visible');
-			$(".nav").css('display','block');
-			$(".nav2").css('display','none');
+			$(".nav").css('display', 'block');
+			$(".nav2").css('display', 'none');
 		});
 
 		// Search functionality
-		$("#search-input").on("keyup", function() {
+		$("#search-input").on("keyup", function () {
 			var value = $(this).val().toLowerCase();
-			$("#my-table tbody tr").filter(function() {
+			$("#my-table tbody tr").filter(function () {
 				$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 			});
 		});
 
 		// View button
-		$(".view").click(function(e) {
+		$(".view").click(function (e) {
 			e.preventDefault();
 			// Add your view logic here
 		});
 	</script>
 </body>
+
 </html>

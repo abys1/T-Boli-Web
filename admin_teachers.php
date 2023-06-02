@@ -125,9 +125,9 @@
 
 
 		<!-- Table -->
-		<div class="table-container">
-			<input type="text" id="search-input" placeholder="Search">
-			<table id="my-table">
+		<div class="table-container" style="text-align: center;">
+	<input type="text" id="search-input" placeholder="Search">
+	<table id="my-table"><br><br>
 				<thead>
 					<tr>
 						<th>ID</th>
