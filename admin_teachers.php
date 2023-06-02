@@ -25,7 +25,8 @@
 <body>
 	<div id="mySidenav" class="sidenav">
 		<p class="logo"><span>T'Boli</p>
-		<a href="admin.php" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+		<a href="admin_dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+		<a href="admin_adminaccount.php"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Admin</a>
 		<a href="admin_student.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Students</a>
 		<a href="admin_teachers.php" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Teachers</a>
 		<a href="admin_upload.php" class="icon-a"><i class="fa fa-upload icons"></i> &nbsp;&nbsp;Upload Lesson/Content</a>
@@ -38,8 +39,8 @@
 	<div id="main">
 		<div class="head">
 			<div class="col-div-6">
-				<span style="font-size:30px;cursor:pointer; color: white;" class="nav">&#9776; Dashboard</span>
-				<span style="font-size:30px;cursor:pointer; color: white;" class="nav2">&#9776; Dashboard</span>
+				<span style="font-size:30px;cursor:pointer; color: white;" class="nav">&#9776; Teachers</span>
+				<span style="font-size:30px;cursor:pointer; color: white;" class="nav2">&#9776; Teachers</span>
 			</div>
 			<div class="col-div-6">
 				<div class="profile">
